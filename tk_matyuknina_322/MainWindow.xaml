@@ -1,0 +1,51 @@
+﻿<Window x:Class="tk_matyuknina_322.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:tk_matyuknina_322"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Введите баллы за задания:" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,5">
+            <TextBlock Text="Задание 1 (макс. 10 баллов):" Width="180"/>
+            <TextBox x:Name="Task1" Width="50" Text="0"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,5">
+            <TextBlock Text="Задание 2 (макс. 50 баллов):" Width="180"/>
+            <TextBox x:Name="Task2" Width="50" Text="0"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="0,5">
+            <TextBlock Text="Задание 3 (макс. 30 баллов):" Width="180"/>
+            <TextBox x:Name="Task3" Width="50" Text="0"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="4" Orientation="Horizontal" Margin="0,5">
+            <TextBlock Text="Задание 4 (макс. 10 баллов):" Width="180"/>
+            <TextBox x:Name="Task4" Width="50" Text="0"/>
+        </StackPanel>
+
+        <Button Grid.Row="5" Content="Рассчитать оценку" Click="CalculateGrade_Click" 
+                Margin="0,15" Padding="10,5" HorizontalAlignment="Center"/>
+
+        <StackPanel Grid.Row="6" VerticalAlignment="Center">
+            <TextBlock x:Name="tbTotal" Text="Сумма баллов: 0" FontSize="14" HorizontalAlignment="Center"/>
+            <TextBlock x:Name="tbGrade" Text="Оценка: -" FontSize="16" FontWeight="Bold" 
+                       HorizontalAlignment="Center" Margin="0,10"/>
+        </StackPanel>
+    </Grid>
+</Window>
